@@ -1,0 +1,312 @@
+@font-face {
+  font-family: "SpidermanFont_1";
+  src: url("/fonts/HOMOARAK.TTF")
+  format("truetype");
+}
+
+@font-face {
+    font-family: "SpidermanFont_2";
+    src: url("/fonts/SPIDER-MAN\ ECLIPSE.ttf")
+    format("truetype");
+}
+
+@font-face {
+    font-family: "SpidermanFont_3";
+    src: url("/fonts/The\ Amazing\ Spider-Man.ttf")
+    format("truetype");
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url("/fonts/BebasNeue-Regular.ttf")
+    format("truetype");
+}
+
+.enterCityContainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    position: relative;
+    user-select: none;
+}
+
+.clickHereText{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: "SpidermanFont_1";
+    /* cursor: pointer; */
+    /* color: rgb(121, 0, 0); */
+    color: rgb(119, 21, 21);
+    user-select: none;
+}
+
+.enterCitySvg{
+    width: 300px;
+    position: absolute;
+    top: 52.5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+    user-select: none;
+}
+
+/* .entercityBtn{
+    font-size: 80px;
+    font-family: "SpidermanFont_1";
+    cursor: pointer;
+    } */
+    
+/* .entercityBtn{
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* .spidermanLogo{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+} */
+
+.audioBtn{
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    z-index: 300;
+    cursor: pointer;
+    user-select: none;
+}
+
+.audioIcon{
+    padding: 12px 15px;
+    border: 2px solid white;
+    border-radius: 50px;
+    width: fit-content;
+    text-align: center;
+    user-select: none;
+}
+.svg{
+    width: 100vw;
+    height: 100vh;
+    z-index: 200;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #000;
+    user-select: none;
+    /* background-color: rgb(116, 0, 0); */
+}
+
+.headerContainer{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+}
+
+.headerLogo{
+    padding: 10px 50px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    user-select: none;
+}
+
+.headerLogo img{
+    width: 200px;
+    user-select: none;
+}
+
+.headerBg{
+    width: 100%;
+    height: 100%;
+    scale: 1.1;
+    user-select: none;
+}
+
+.headerImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.headerOverlay{
+    /* background-color: rgba(0, 0, 0, 0.636); */
+    /* background-color: rgba(0, 0, 0, 0.422); */
+    background-color: rgba(0, 0, 0, 0.313);
+    /* background-color: rgba(4, 4, 4, 0.164); */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+
+.headerSpiderman{
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -5%;
+    z-index: 10;
+    user-select: none;
+}
+
+.headerSpidermanImg{
+    max-width: 600px;
+    user-select: none;
+}
+
+.headerText{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+}
+
+.headertextContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.headerText1{
+    font-family: "SpidermanFont_1";
+    font-size: 50px;
+    z-index: 70;
+    -webkit-text-stroke: 2px black;
+    user-select: none;
+}
+
+.headerText2{
+    font-family: "SpidermanFont_3";
+    /* color: #720303d4; */
+    color: #7c0000cb;
+    /* color: #ba0000d4; */
+    font-size: 230px;
+    -webkit-text-stroke: 4px #00112ed9;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.95);
+    user-select: none;
+}
+
+@media (max-width: 1050px) {
+    /* .entercityBtn{
+        font-size: 65px;
+    } */
+    .headerSpidermanImg{
+        max-width: 500px;
+    }
+    .headerText1{
+        font-size: 40px;
+    }
+    .headerText2{
+        font-size: 180px;
+    }
+}
+
+@media (max-width: 830px) {
+
+    /* .entercityBtn{
+        font-size: 50px;
+    } */
+
+    .clickHereText{
+        font-size: 17px;
+        top: 15%;
+    }
+
+    .enterCitySvg{
+        width: 250px;
+    }
+
+    .headerLogo{
+        padding: 10px 30px;
+    }
+    .headerText1{
+        font-size: 30px;
+        -webkit-text-stroke: 0;
+    }
+    .headerText2{
+        font-size: 130px;
+    }
+}
+
+@media (max-width: 600px) {
+    /* .entercityBtn{
+        font-size: 30px;
+    } */
+
+    .clickHereText{
+        font-size: 14px;
+        top: 20%;
+    }
+
+    .enterCitySvg{
+        width: 230px;
+    }
+
+    .headerLogo{
+        padding: 10px 0;
+    }
+    .headerLogo img{
+        width: 150px;
+    }
+    .headerText1{
+        font-size: 20px;
+    }
+    .headerText2{
+        font-size: 80px;
+    }
+}
+
+@media (max-width: 380px) {
+    /* .entercityBtn{
+        font-size: 25px;
+    } */
+
+    .clickHereText{
+        font-size: 12px;
+        top: 23%;
+    }
+
+    .enterCitySvg{
+        width: 200px;
+    }
+
+    .headerLogo img{
+        width: 120px;
+    }
+    
+    .headerSpidermanImg{
+        max-width: 350px;
+    }
+    .headerText1{
+        font-size: 15px;
+    }
+    .headerText2{
+        font-size: 60px;
+    }
+
+}
