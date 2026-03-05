@@ -5,7 +5,6 @@ import { useRef, useState } from "react";
 
 const Header = ({setStartDownloadAnimation}) => {
     const headerRef = useRef(null);
-    const enterCityRef = useRef(null);
     const clickSpiderRef = useRef(null);
     const audioRef = useRef(null);
 
@@ -92,7 +91,7 @@ const Header = ({setStartDownloadAnimation}) => {
 
         clickSpiderRef.current?.addEventListener("click",handleEnterCity);
 
-        return ()=> document.removeEventListener("click",handleEnterCity)
+        return ()=> clickSpiderRef.current?.removeEventListener("click",handleEnterCity)
     },[]);
 
     useGSAP(() => {
@@ -245,7 +244,7 @@ const Header = ({setStartDownloadAnimation}) => {
         headerRef.current?.addEventListener("mousemove",handleMouseMove);
 
         return ()=>{
-             headerRef.current?.removeEventListener("mousemove",handleMouseMove);
+            headerRef.current?.removeEventListener("mousemove",handleMouseMove);
         }
 
     },[isParallex])
@@ -305,7 +304,7 @@ L443.8,401.7z M556.2,401.7c5.7,2.8,51.2,25.6,51.2,25.6v128H500V401.7L556.2,401.7
 
         
         <audio ref={audioRef} preload="auto">
-            <source src="/Spiderman_Theme_Final.m4a" type="audio/mp4"/>
+            <source src={`${import.meta.env.BASE_URL}Spiderman_Theme_Final.m4a`} type="audio/mp4"/>
             {/* <source src="/Spiderman-theme-2.m4a" type="audio/mp4"/> */}
             {/* <source src="/SpiderMan-Theme.m4a" type="audio/mp4"/> */}
         </audio>
@@ -328,17 +327,14 @@ L443.8,401.7z M556.2,401.7c5.7,2.8,51.2,25.6,51.2,25.6v128H500V401.7L556.2,401.7
 
             <div className="enterCityContainer" >
 
-            {/* <div className="entercityBtn">
-                Enter the City
-                <img src="/DownloadSpidermanBgImg_1.png" alt="SpidermanLogo" className="spidermanLogo"/>
-            </div> */}
-
                 <div className="clickHere">
+                    
                     <div className="clickHereText">
                         Click Spider
                     </div>
+                
                 </div>
-            
+
                 <svg
                     ref={clickSpiderRef}
                     className="enterCitySvg"
@@ -384,7 +380,7 @@ L443.8,401.7z M556.2,401.7c5.7,2.8,51.2,25.6,51.2,25.6v128H500V401.7L556.2,401.7
                 </defs>
 
                 <image
-                href="/HeaderBgImg_updated.png"
+                href={`${import.meta.env.BASE_URL}HeaderBgImg_updated_resized.webp`}
                 width="100%"
                 height="100%"
                 mask="url(#spiderMask)"/>
@@ -400,14 +396,14 @@ L443.8,401.7z M556.2,401.7c5.7,2.8,51.2,25.6,51.2,25.6v128H500V401.7L556.2,401.7
 
             <div className="headerLogo">
 
-                <img src="/Marvel_Studios_Logo.png" alt="Marvel_Studios_Logo" className="marvelStudiosLogo"/>
-                <img src="/SonyLogo.png" alt="Marvel_Studios_Logo" className="sonyLogo"/>
+                <img src={`${import.meta.env.BASE_URL}Marvel_Studios_Logo.png`} alt="Marvel_Studios_Logo" className="marvelStudiosLogo"/>
+                <img src={`${import.meta.env.BASE_URL}SonyLogo.png`} alt="Marvel_Studios_Logo" className="sonyLogo"/>
             
             </div>
 
             <div className="headerBg">
 
-                <img src="/HeaderBgImg_updated.png" alt="HeaderImg" className='headerImg'/>
+                <img src={`${import.meta.env.BASE_URL}HeaderBgImg_updated_resized.webp`} alt="HeaderImg" className='headerImg'/>
             
             </div>
 
@@ -415,7 +411,7 @@ L443.8,401.7z M556.2,401.7c5.7,2.8,51.2,25.6,51.2,25.6v128H500V401.7L556.2,401.7
 
             <div className="headerSpiderman">
 
-                <img src="/HeaderSpidermanImg_updated.png" alt="HeaderSpidermanImg" className='headerSpidermanImg'/>
+                <img src={`${import.meta.env.BASE_URL}HeaderSpidermanImg_updated_resized.webp`} alt="HeaderSpidermanImg" className='headerSpidermanImg'/>
             
             </div>
 

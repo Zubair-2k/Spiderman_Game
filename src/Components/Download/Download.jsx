@@ -16,8 +16,10 @@ const Download = ({startDownloadAnimation}) => {
         const tl1= gsap.timeline({
             scrollTrigger:{
                 trigger: downloadRef.current,
-                start: "-30%",
-                end: "-20%",
+                // start: "-30%",
+                // end: "-20%",
+                start: "top 50%",
+                // markers: true
             }
             ,onComplete: () => {
                 setIsSpidermanComing(true);
@@ -56,86 +58,144 @@ const Download = ({startDownloadAnimation}) => {
     useLayoutEffect(()=>{
         if(!isSpidermanComing) return; 
 
-        const tl2= gsap.timeline();
-
-        tl2.to(".downloadSpidermanImg",{
-            top:230,
-            duration: 2.8,
-            ease: "elastic.out(1,0.55)",
-        })
-        .to(".downloadSpidermanImg",{
-            rotation: 2,
-            transformOrigin: "top center",
-            duration:2,
-            // delay:1,
-            ease: "sine.inOut",
-            // repeat: -1,
-            // yoyo: true
-        })
-        .to(".downloadSpidermanImg",{
-            rotation: -2,
-            transformOrigin: "top center",
-            duration:2,
-            ease: "sine.inOut",
-            // repeat: -1,
-            // yoyo: true
-        })
-        .to(".downloadSpidermanImg",{
-            rotation: 5,
-            transformOrigin: "top center",
-            duration:2,
-            // delay:1,
-            ease: "sine.inOut",
-            // repeat: -1,
-            // yoyo: true
-        })
-        .to(".downloadSpidermanImg",{
-            rotation: -5,
-            transformOrigin: "top center",
-            duration:2,
-            ease: "sine.inOut",
-            // repeat: -1,
-            // yoyo: true
-        })
-        .to(".downloadSpidermanImg",{
-            rotation: 8,
-            transformOrigin: "top center",
-            duration:2,
-            // delay:1,
-            ease: "sine.inOut",
-            repeat: -1,
-            yoyo: true
-        })
-        .to(".downloadSpidermanImg",{
-            rotation: -7,
-            transformOrigin: "top center",
-            duration:2,
-            ease: "sine.inOut",
-            repeat: -1,
-            yoyo: true
-        });
-
-
         const ctx = gsap.context(()=>{
 
             const mm = gsap.matchMedia();
 
             mm.add("(min-width: 1200px)",() => {
-                gsap.to(".downloadSpidermanImg" ,
-                {
+                // gsap.to(".downloadSpidermanImg" ,
+                // {
+                //     top:260,
+                //     duration: 2.8,
+                //     ease: "elastic.out(1,0.55)",
+                // })
+
+                const tl2= gsap.timeline();
+
+                tl2.to(".downloadSpidermanImg",{
                     top:260,
                     duration: 2.8,
                     ease: "elastic.out(1,0.55)",
                 })
+                .to(".downloadSpidermanImg",{
+                    rotation: 2,
+                    transformOrigin: "top center",
+                    duration:2,
+                    // delay:1,
+                    ease: "sine.inOut",
+                    // repeat: -1,
+                    // yoyo: true
+                })
+                .to(".downloadSpidermanImg",{
+                    rotation: -2,
+                    transformOrigin: "top center",
+                    duration:2,
+                    ease: "sine.inOut",
+                    // repeat: -1,
+                    // yoyo: true
+                })
+                .to(".downloadSpidermanImg",{
+                    rotation: 5,
+                    transformOrigin: "top center",
+                    duration:2,
+                    // delay:1,
+                    ease: "sine.inOut",
+                    // repeat: -1,
+                    // yoyo: true
+                })
+                .to(".downloadSpidermanImg",{
+                    rotation: -5,
+                    transformOrigin: "top center",
+                    duration:2,
+                    ease: "sine.inOut",
+                    // repeat: -1,
+                    // yoyo: true
+                })
+                .to(".downloadSpidermanImg",{
+                    rotation: 8,
+                    transformOrigin: "top center",
+                    duration:2,
+                    // delay:1,
+                    ease: "sine.inOut",
+                    repeat: -1,
+                    yoyo: true
+                })
+                .to(".downloadSpidermanImg",{
+                    rotation: -7,
+                    transformOrigin: "top center",
+                    duration:2,
+                    ease: "sine.inOut",
+                    repeat: -1,
+                    yoyo: true
+                });
 
                 
             })
 
             mm.add("(max-width: 1199px)", () => {
-                gsap.to(".downloadSpidermanImg", {
+                // gsap.to(".downloadSpidermanImg", {
+                //     top:230,
+                //     duration: 2.8,
+                //     ease: "elastic.out(1,0.55)",
+                // });
+
+                const tl2= gsap.timeline();
+
+                tl2.to(".downloadSpidermanImg",{
                     top:230,
                     duration: 2.8,
                     ease: "elastic.out(1,0.55)",
+                })
+                .to(".downloadSpidermanImg",{
+                    rotation: 2,
+                    transformOrigin: "top center",
+                    duration:2,
+                    // delay:1,
+                    ease: "sine.inOut",
+                    // repeat: -1,
+                    // yoyo: true
+                })
+                .to(".downloadSpidermanImg",{
+                    rotation: -2,
+                    transformOrigin: "top center",
+                    duration:2,
+                    ease: "sine.inOut",
+                    // repeat: -1,
+                    // yoyo: true
+                })
+                .to(".downloadSpidermanImg",{
+                    rotation: 5,
+                    transformOrigin: "top center",
+                    duration:2,
+                    // delay:1,
+                    ease: "sine.inOut",
+                    // repeat: -1,
+                    // yoyo: true
+                })
+                .to(".downloadSpidermanImg",{
+                    rotation: -5,
+                    transformOrigin: "top center",
+                    duration:2,
+                    ease: "sine.inOut",
+                    // repeat: -1,
+                    // yoyo: true
+                })
+                .to(".downloadSpidermanImg",{
+                    rotation: 8,
+                    transformOrigin: "top center",
+                    duration:2,
+                    // delay:1,
+                    ease: "sine.inOut",
+                    repeat: -1,
+                    yoyo: true
+                })
+                .to(".downloadSpidermanImg",{
+                    rotation: -7,
+                    transformOrigin: "top center",
+                    duration:2,
+                    ease: "sine.inOut",
+                    repeat: -1,
+                    yoyo: true
                 });
     
             });
@@ -148,11 +208,14 @@ const Download = ({startDownloadAnimation}) => {
 
   return (
     <div className="download" ref={downloadRef}>
+
         <div className="downloadImg">
-            <img src="/Spiderman_Download_Img_updated_2.png" alt="Spiderman_Download_Bg_Img" className="spidermanDownloadBgImgUpdated"/>
-            <img src="/DownloadSpidermanBgImg_1.png" alt="Spiderman_Download_Bg_Img" className="spidermanDownloadBgImg"/>
-            <img src="/DownloadSpidermanColorEnchancedImg.png" alt="DownloadSpiderman" className="downloadSpidermanImg"/>
+
+            <img src={`${import.meta.env.BASE_URL}Spiderman_Download_Img_updated_resized.webp`} alt="Spiderman_Download_Bg_Img" loading="lazy" className="spidermanDownloadBgImgUpdated"/>
+            <img src={`${import.meta.env.BASE_URL}DownloadSpidermanBgImg_resized.webp`} alt="Spiderman_Download_Bg_Img" loading="lazy" className="spidermanDownloadBgImg"/>
+            <img src={`${import.meta.env.BASE_URL}DownloadSpidermanColorEnchancedImg_resized.webp`} alt="DownloadSpiderman" loading="lazy" className="downloadSpidermanImg"/>
             {/* <img src="/DownloadSpidermanImg.png" alt="DownloadSpiderman" className="downloadSpidermanImg"/> */}
+
         </div>
 
         <div className="downloadDetails">
