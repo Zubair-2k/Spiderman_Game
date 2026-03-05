@@ -232,7 +232,7 @@ const Download = ({startDownloadAnimation}) => {
             {/* <button className="downloadBtn">Download Now</button> */}
 
             
-                <a href="https://store.steampowered.com/app/1817070/Marvels_SpiderMan_Remastered/" target="blank" className="downloadBtn">
+                <a href="https://store.steampowered.com/app/1817070/Marvels_SpiderMan_Remastered/" target="_blank" className="downloadBtn">
                     Play Now
                 </a>
     

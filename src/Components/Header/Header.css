@@ -59,6 +59,7 @@
     transform: translate(-50%,-50%);
     cursor: pointer;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* .entercityBtn{
@@ -87,6 +88,7 @@
     z-index: 300;
     cursor: pointer;
     user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .audioIcon{
