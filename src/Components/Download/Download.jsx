@@ -8,7 +8,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Download = ({startDownloadAnimation}) => {
     const downloadRef = useRef(null);
-    const [isSpidermanComing, setIsSpidermanComing] = useState(false) 
+    const [isSpidermanComing, setIsSpidermanComing] = useState(false);
+    const isMobile = window.innerWidth < 768;
 
     useGSAP(()=>{
         if(!startDownloadAnimation) return;
@@ -57,6 +58,7 @@ const Download = ({startDownloadAnimation}) => {
 
     useLayoutEffect(()=>{
         if(!isSpidermanComing) return; 
+        if (isMobile) return;
 
         const ctx = gsap.context(()=>{
 
