@@ -13,6 +13,7 @@ const Download = ({startDownloadAnimation}) => {
 
     useGSAP(()=>{
         if(!startDownloadAnimation) return;
+        if (isMobile) return;
 
         const tl1= gsap.timeline({
             scrollTrigger:{
